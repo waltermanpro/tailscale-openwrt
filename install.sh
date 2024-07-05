@@ -50,7 +50,7 @@ https://raw.githubusercontent.com/waltermanpro/tailscale-openwrt/chinese_mainlan
 
 for proxy_zip_url in $proxy_zip_urls; do
     # 使用 timeout 命令设定超时时间
-    if timeout $timeout_seconds wget -q $proxy_zip_url -O - | tar x -zvC / -f - > /dev/null 2>&1; then
+    if wget -T $timeout_seconds -q $proxy_zip_url -O - | tar xzf - -C / >/dev/null 2>&1; then
         download_success=true
         echo "INSTALL: ------"
         echo "下载安装脚本成功!"
