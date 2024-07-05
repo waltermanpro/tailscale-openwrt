@@ -52,4 +52,4 @@ rm -rf /tmp/tailscale* && wget -O- https://ghproxy.cc/https://raw.githubusercont
 ### 特别感谢:
 [adyanth [openwrt-tailscale-enabler]](https://github.com/adyanth/openwrt-tailscale-enabler) 
 
-[adyanth [CH3NGYZ/tailscale-openwrt]]https://github.com/CH3NGYZ/tailscale-openwrt
+[adyanth [CH3NGYZ/tailscale-openwrt]](https://github.com/CH3NGYZ/tailscale-openwrt) 
