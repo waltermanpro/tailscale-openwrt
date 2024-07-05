@@ -28,7 +28,7 @@ fi
 if [ -e /tmp/tailscaled ]; then
         echo "INSTALL: ------------------"
         echo "存在残留, 请卸载并重启后重试"
-        echo "卸载命令: wget -qO- https://ghproxy.net/https://raw.githubusercontent.com/CH3NGYZ/tailscale-openwrt/chinese_mainland/uninstall.sh | sh"
+        echo "卸载命令: wget -qO- https://ghproxy.net/https://raw.githubusercontent.com/waltermanpro/tailscale-openwrt/chinese_mainland/uninstall.sh | sh"
         echo "---------------------------"
         exit 1
 fi
@@ -49,12 +49,11 @@ timeout_seconds=5
 download_success=false
 
 # 代理列表
-proxy_zip_urls="https://ghproxy.net/https://raw.githubusercontent.com/CH3NGYZ/tailscale-openwrt/chinese_mainland/tailscale-openwrt.tgz
-https://fastly.jsdelivr.net/gh/CH3NGYZ/tailscale-openwrt@chinese_mainland/tailscale-openwrt.tgz
-https://gcore.jsdelivr.net/gh/CH3NGYZ/tailscale-openwrt@chinese_mainland/tailscale-openwrt.tgz
-https://jsdelivr.b-cdn.net/gh/CH3NGYZ/tailscale-openwrt@chinese_mainland/tailscale-openwrt.tgz
-https://mirror.ghproxy.com/https://raw.githubusercontent.com/CH3NGYZ/tailscale-openwrt/chinese_mainland/tailscale-openwrt.tgz
-https://raw.fgit.cf/CH3NGYZ/tailscale-openwrt/chinese_mainland/tailscale-openwrt.tgz"
+proxy_zip_urls="https://ghproxy.net/https://raw.githubusercontent.com/waltermanpro/tailscale-openwrt/chinese_mainland/tailscale-openwrt.tgz
+https://fastly.jsdelivr.net/gh/waltermanpro/tailscale-openwrt@chinese_mainland/tailscale-openwrt.tgz
+https://gcore.jsdelivr.net/gh/waltermanpro/tailscale-openwrt@chinese_mainland/tailscale-openwrt.tgz
+https://jsdelivr.b-cdn.net/gh/waltermanpro/tailscale-openwrt@chinese_mainland/tailscale-openwrt.tgz
+https://mirror.ghproxy.com/https://raw.githubusercontent.com/waltermanpro/tailscale-openwrt/chinese_mainland/tailscale-openwrt.tgz"
 
 for proxy_zip_url in $proxy_zip_urls; do
     # 使用 timeout 命令设定超时时间
@@ -98,5 +97,5 @@ tailscale up
 # echo "INSTALL: ---------------------------------------------"
 # echo "当前机器的架构是 arch_:${arch_}${endianness}| arch:${arch}"
 # echo "如果成功运行, 请在这个issue留下评论以便作者及时修改说明文档: "
-# echo "https://github.com/CH3NGYZ/tailscale-openwrt/issues/6"
+# echo "https://github.com/waltermanpro/tailscale-openwrt/issues/6"
 # echo "------------------------------------------------------"
