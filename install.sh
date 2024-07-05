@@ -53,7 +53,8 @@ proxy_zip_urls="https://ghproxy.net/https://raw.githubusercontent.com/waltermanp
 https://fastly.jsdelivr.net/gh/waltermanpro/tailscale-openwrt@chinese_mainland/tailscale-openwrt.tgz
 https://gcore.jsdelivr.net/gh/waltermanpro/tailscale-openwrt@chinese_mainland/tailscale-openwrt.tgz
 https://jsdelivr.b-cdn.net/gh/waltermanpro/tailscale-openwrt@chinese_mainland/tailscale-openwrt.tgz
-https://mirror.ghproxy.com/https://raw.githubusercontent.com/waltermanpro/tailscale-openwrt/chinese_mainland/tailscale-openwrt.tgz"
+https://mirror.ghproxy.com/https://raw.githubusercontent.com/waltermanpro/tailscale-openwrt/chinese_mainland/tailscale-openwrt.tgz
+https://raw.githubusercontent.com/waltermanpro/tailscale-openwrt/chinese_mainland/tailscale-openwrt.tgz"
 
 for proxy_zip_url in $proxy_zip_urls; do
     # 使用 timeout 命令设定超时时间
