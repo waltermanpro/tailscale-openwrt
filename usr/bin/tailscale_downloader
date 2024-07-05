@@ -28,14 +28,14 @@ if [ ! -f /tmp/tailscale ]; then
         echo "DOWNLOAD: ----------------------------------------------------"
         echo "当前机器的架构是${arch}${endianness}, 脚本不兼容此架构"
         echo "请给作者提issue以便作者及时修改脚本:"
-        echo "https://github.com/CH3NGYZ/tailscale-openwrt/issues"
+        echo "https://github.com/waltermanpro/tailscale-openwrt/issues"
         echo "--------------------------------------------------------------"
         exit 1
     fi
 
     latest_version="not_available"
     version_timeout=20
-    version_url="https://github.com/CH3NGYZ/tailscale-openwrt/releases/latest"
+    version_url="https://github.com/waltermanpro/tailscale-openwrt/releases/latest"
     version_proxys="https://ghproxy.cc
     https://git.xfj0.cn
     https://cors.isteed.cc
@@ -79,7 +79,7 @@ if [ ! -f /tmp/tailscale ]; then
 
     # 如果最终还是无法获取到最新版本号，使用默认版本号
     if [ "$latest_version" = "not_available" ]; then
-        latest_version="1.56.1"
+        latest_version="1.68.2"
         echo "DOWNLOAD: --------------------------------"
         echo "获取版本号失败，使用内置版本号：$latest_version"
         echo "------------------------------------------"
@@ -88,7 +88,7 @@ if [ ! -f /tmp/tailscale ]; then
     version="${latest_version}_${arch}${endianness}"
     # echo "正在下载 tailscale_${version}.tgz ..."
     
-    zip_url="https://github.com/CH3NGYZ/tailscale-openwrt/releases/download/${latest_version}/tailscale_${version}.tgz"
+    zip_url="https://github.com/waltermanpro/tailscale-openwrt/releases/download/${latest_version}/tailscale_${version}.tgz"
 
     echo -e "tailscale_${version}/tailscale" > /tmp/tailscale_${version}_files.txt
     echo -e "tailscale_${version}/tailscaled" >> /tmp/tailscale_${version}_files.txt
