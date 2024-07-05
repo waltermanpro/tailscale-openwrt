@@ -32,16 +32,6 @@ if [ -e /tmp/tailscaled ]; then
         echo "---------------------------"
         exit 1
 fi
-opkg update
-opkg install libustream-openssl ca-bundle kmod-tun coreutils-timeout
-echo "INSTALL: ------------------------------------------------"
-echo "如果包安装失败,请手动运行以下命令安装,如果还是不行,请手动查找原因:"
-echo "opkg install libustream-openssl"
-echo "opkg install ca-bundle"
-echo "opkg install kmod-tun"
-echo "opkg install coreutils-timeout"
-echo "以上四个包缺一不可"
-echo "---------------------------------------------------------"
 
 # 下载安装包
 timeout_seconds=5
