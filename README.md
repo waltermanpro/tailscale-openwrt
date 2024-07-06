@@ -1,3 +1,4 @@
+基于原作者修改，删除依赖安装的脚本。自用
 # Tailscale on OpenWRT :smiley: [![Page Views Count](https://badges.toozhao.com/badges/01GZWH4F36G14VWXT8RP9KRCYV/green.svg)](https://badges.toozhao.com/stats/01GZWH4F36G14VWXT8RP9KRCYV)
 
 |  在OpenWRT上部署Tailscale的最简单方法 |
